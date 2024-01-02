@@ -1,8 +1,8 @@
 import streamlit as st
 from model.generator import Generator, Model
 
-def process_prompt(prompt, modelo_selecionado: Model):
-    result = Generator(modelo_selecionado).generate(
+def process_prompt(prompt, selected_model: Model):
+    result = Generator(selected_model).generate(
         prompt=prompt
     )
     link_imagem = result[0]
